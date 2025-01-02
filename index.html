@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Order delicious pizzas, burgers, pasta, and ice creams from our food store. Fast delivery and premium quality ingredients."
+    />
+    <meta
+      name="keywords"
+      content="Food Store, Pizza, Burger, Pasta, Ice Cream, Drinks, Fast Delivery, Quality Food"
+    />
+
+    <title>Delicious Food Online - Pizza, Burgers, Pasta & More</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Welcome to Our Food Store</h1>
+      <img
+        id="hero-image"
+        src="./images/mainpic.jpg"
+        alt="A table filled with delicious pizzas, burgers, and drinks"
+      />
+      <a href="categories.html" id="explorethem" class="button"
+        >Explore Categories</a
+      >
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+
+      <!-- About Us Section -->
+      <section id="about-us">
+        <h2>About Us</h2>
+        <p>
+          Welcome to our Food Store, where we serve happiness one bite at a
+          time! We pride ourselves on offering a wide variety of delicious food
+          items, including pizzas, burgers, pastas, ice creams, and refreshing
+          drinks. Our mission is to bring joy to your table with fresh,
+          high-quality ingredients and exceptional service.
+        </p>
+      </section>
+
+      <!-- Reviews Section -->
+      <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <div id="reviews-container">
+          <div class="review">
+            <h3>John Doe</h3>
+            <p class="rating">★★★★☆</p>
+            <p>
+              "The pizza was absolutely amazing! I can't wait to try other
+              items."
+            </p>
+          </div>
+
+          <div class="review">
+            <h3>Jane Smith</h3>
+            <p class="rating">★★★★★</p>
+            <p>"The pasta was fresh and flavorful. Delivery was quick too!"</p>
+          </div>
+
+          <div class="review">
+            <h3>Mike Johnson</h3>
+            <p class="rating">★★★★☆</p>
+            <p>"Great variety of food. Loved the ice cream selection!"</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

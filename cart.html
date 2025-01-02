@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Your Cart</h1>
+
+      <section id="cart-items">
+        <!-- Items in the cart will be displayed here dynamically -->
+      </section>
+      <button style="margin-top: 100px" onclick="checkout()">Checkout</button>
+      <button onclick="clearCart()">Clear Cart</button>
+
+      <!-- Cart Summary -->
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+
+        <!-- New button to clear the cart -->
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+      // This function will populate the cart page with the items and calculate the total
+      function displayCart() {
+        let cartDetails = "";
+        let total = 0;
+        cart.forEach((item) => {
+          cartDetails += `<div class="cart-item">
+                          <p>${item.name} - $${item.price}</p>
+                          <button onclick="removeFromCart('${item.name}')">Remove</button>
+                        </div>`;
+          total += item.price;
+        });
+
+        // Display items in the cart
+        document.getElementById("cart-items").innerHTML = cartDetails;
+
+        // Update the total price
+        document.getElementById("total").textContent = total.toFixed(2);
+
+        // Update the cart count on the nav bar
+        document.getElementById("cart-count").textContent = cart.length;
+      }
+
+      // This function removes an item from the cart
+      function removeFromCart(itemName) {
+        cart = cart.filter((item) => item.name !== itemName);
+        updateCart();
+        displayCart();
+      }
+
+      // This function updates the cart count and total price
+      function updateCart() {
+        let total = 0;
+        cart.forEach((item) => (total += item.price));
+        document.getElementById("total").textContent = total.toFixed(2);
+        document.getElementById("cart-count").textContent = cart.length;
+      }
+
+      // Function to handle the checkout action (for now, just a placeholder)
+      function checkout() {
+        alert("Proceeding to checkout...");
+        // Redirect to checkout page (could be implemented in future)
+        window.location.href = "checkout.html";
+      }
+
+      // Call displayCart on page load
+      window.onload = displayCart;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Food Website with pizza, burger, pasta, ice cream, and drinks categories."
+    />
+    <title>Pizza - Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Pizza Menu</h1>
+
+      <section class="pizza-items">
+        <!-- Pizza 1 -->
+        <div class="pizza-item">
+          <img
+            src="./images/Margherita.jpeg"
+            alt="Margherita Pizza"
+            class="pizza-img"
+          />
+          <h3>Margherita</h3>
+          <p>A classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+          <p>$10.00</p>
+          <button onclick="addToCart('Margherita', 10)">Add to Cart</button>
+        </div>
+
+        <!-- Pizza 2 -->
+        <div class="pizza-item">
+          <img
+            src="./images/Pepperoni.jpeg"
+            alt="Pepperoni Pizza"
+            class="pizza-img"
+          />
+          <h3>Pepperoni</h3>
+          <p>
+            A delicious pizza topped with pepperoni slices and mozzarella
+            cheese.
+          </p>
+          <p>$12.00</p>
+          <button onclick="addToCart('Pepperoni', 12)">Add to Cart</button>
+        </div>
+
+        <!-- Pizza 3 -->
+        <div class="pizza-item">
+          <img
+            src="./images/veggie.jpeg"
+            alt="Veggie Pizza"
+            class="pizza-img"
+          />
+          <h3>Veggie</h3>
+          <p>
+            A pizza with a variety of fresh vegetables like bell peppers,
+            onions, and olives.
+          </p>
+          <p>$11.00</p>
+          <button onclick="addToCart('Veggie', 11)">Add to Cart</button>
+        </div>
+
+        <!-- Pizza 4 -->
+        <div class="pizza-item">
+          <img
+            src="./images/Hawaiian.jpeg"
+            alt="Hawaiian Pizza"
+            class="pizza-img"
+          />
+          <h3>Hawaiian</h3>
+          <p>A tropical pizza topped with ham, pineapple, and mozzarella.</p>
+          <p>$13.00</p>
+          <button onclick="addToCart('Hawaiian', 13)">Add to Cart</button>
+        </div>
+      </section>
+
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

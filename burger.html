@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Food Website with burger, pizza, pasta, ice cream, and drinks categories."
+    />
+    <title>Burgers - Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Burger Menu</h1>
+
+      <section class="burger-items">
+        <!-- Burger 1 -->
+        <div class="burger-item">
+          <img
+            src="./images/Cheeseburger.jpeg"
+            alt="Cheeseburger"
+            class="burger-img"
+          />
+          <h3>Cheeseburger</h3>
+          <p>
+            A delicious burger with a beef patty, melted cheese, lettuce, and
+            tomato.
+          </p>
+          <p>$8.00</p>
+          <button onclick="addToCart('Cheeseburger', 8)">Add to Cart</button>
+        </div>
+
+        <!-- Burger 2 -->
+        <div class="burger-item">
+          <img
+            src="./images/BBQ-Burger.jpeg"
+            alt="BBQ Burger"
+            class="burger-img"
+          />
+          <h3>BBQ Burger</h3>
+          <p>A tasty burger with BBQ sauce, beef patty, and crispy onions.</p>
+          <p>$9.00</p>
+          <button onclick="addToCart('BBQ Burger', 9)">Add to Cart</button>
+        </div>
+
+        <!-- Burger 3 -->
+        <div class="burger-item">
+          <img
+            src="./images/Veggie-Burger.jpeg"
+            alt="Veggie Burger"
+            class="burger-img"
+          />
+          <h3>Veggie Burger</h3>
+          <p>
+            A healthy burger with a veggie patty, lettuce, tomato, and avocado.
+          </p>
+          <p>$7.00</p>
+          <button onclick="addToCart('Veggie Burger', 7)">Add to Cart</button>
+        </div>
+
+        <!-- Burger 4 -->
+        <div class="burger-item">
+          <img
+            src="./images/Mushroom-Burger.jpeg"
+            alt="Mushroom Burger"
+            class="burger-img"
+          />
+          <h3>Mushroom Burger</h3>
+          <p>A savory burger with mushrooms, Swiss cheese, and garlic aioli.</p>
+          <p>$9.50</p>
+          <button onclick="addToCart('Mushroom Burger', 9.5)">
+            Add to Cart
+          </button>
+        </div>
+      </section>
+
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

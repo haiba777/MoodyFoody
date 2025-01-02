@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories - Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="categories">
+        <div class="category">
+          <h2>Pizza</h2>
+          <img src="images/pizza.jpeg" alt="Pizza" />
+          <a href="pizza.html" class="button">Browse Pizza</a>
+        </div>
+        <div class="category">
+          <h2>Burger</h2>
+          <img src="images/burger.jpeg" alt="Burger" />
+          <a href="burger.html" class="button">Browse Burger</a>
+        </div>
+        <div class="category">
+          <h2>Pasta</h2>
+          <img src="images/pastas.jpeg" alt="Pasta" />
+          <a href="pasta.html" class="button">Browse Pasta</a>
+        </div>
+
+        <div class="category">
+          <h2>Drinks</h2>
+          <img src="images/drinks.jpeg" alt="Drinks" />
+          <a href="drinks.html" class="button">Browse Drinks</a>
+        </div>
+      </section>
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
