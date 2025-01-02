@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Food Website with pasta, pizza, burger, ice cream, and drinks categories."
+    />
+    <title>Pasta - Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Pasta Menu</h1>
+
+      <section class="pasta-items">
+        <!-- Pasta 1 -->
+        <div class="pasta-item">
+          <img
+            src="./images/Spaghetti.jpeg"
+            alt="Spaghetti"
+            class="pasta-img"
+          />
+          <h3>Spaghetti</h3>
+          <p>Classic pasta served with marinara sauce and parmesan cheese.</p>
+          <p>$12.00</p>
+          <button onclick="addToCart('Spaghetti', 12)">Add to Cart</button>
+        </div>
+
+        <!-- Pasta 2 -->
+        <div class="pasta-item">
+          <img
+            src="./images/Fettuccine-Alfredo.jpeg"
+            alt="Fettuccine Alfredo"
+            class="pasta-img"
+          />
+          <h3>Fettuccine Alfredo</h3>
+          <p>
+            Creamy Alfredo sauce with fettuccine pasta, topped with parmesan
+            cheese.
+          </p>
+          <p>$14.00</p>
+          <button onclick="addToCart('Fettuccine Alfredo', 14)">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Pasta 3 -->
+        <div class="pasta-item">
+          <img
+            src="./images/Penne-Arabbiata.jpeg"
+            alt="Penne Arrabbiata"
+            class="pasta-img"
+          />
+          <h3>Penne Arrabbiata</h3>
+          <p>Spicy pasta with arrabbiata sauce, garlic, and chili flakes.</p>
+          <p>$13.00</p>
+          <button onclick="addToCart('Penne Arrabbiata', 13)">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Pasta 4 -->
+        <div class="pasta-item">
+          <img src="./images/Lasagna.jpeg" alt="Lasagna" class="pasta-img" />
+          <h3>Lasagna</h3>
+          <p>
+            A hearty dish with layers of pasta, ricotta cheese, and marinara
+            sauce.
+          </p>
+          <p>$15.00</p>
+          <button onclick="addToCart('Lasagna', 15)">Add to Cart</button>
+        </div>
+      </section>
+
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

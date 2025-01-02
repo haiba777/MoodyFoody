@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Food Website with drinks, pizza, burger, pasta, and ice cream categories."
+    />
+    <title>Drinks - Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Explore Categories</a></li>
+
+          <li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Drinks Menu</h1>
+
+      <section class="drink-items">
+        <!-- Drink 1 -->
+        <div class="drink-item">
+          <img src="./images/Coke.jpeg" alt="Coke" class="drink-img" />
+          <h3>Coke</h3>
+          <p>A refreshing carbonated soft drink.</p>
+          <p>$2.00</p>
+          <button onclick="addToCart('Coke', 2)">Add to Cart</button>
+        </div>
+
+        <!-- Drink 2 -->
+        <div class="drink-item">
+          <img src="./images/Sprite.jpeg" alt="Sprite" class="drink-img" />
+          <h3>Sprite</h3>
+          <p>A crisp and refreshing lemon-lime soda.</p>
+          <p>$2.00</p>
+          <button onclick="addToCart('Sprite', 2)">Add to Cart</button>
+        </div>
+
+        <!-- Drink 3 -->
+        <div class="drink-item">
+          <img src="./images/Iced-Tea.jpeg" alt="Iced Tea" class="drink-img" />
+          <h3>Iced Tea</h3>
+          <p>Chilled iced tea served with lemon slices.</p>
+          <p>$2.50</p>
+          <button onclick="addToCart('Iced Tea', 2.5)">Add to Cart</button>
+        </div>
+
+        <!-- Drink 4 -->
+        <div class="drink-item">
+          <img src="./images/Water.jpeg" alt="Water" class="drink-img" />
+          <h3>Water</h3>
+          <p>Refreshing bottled water.</p>
+          <p>$1.00</p>
+          <button onclick="addToCart('Water', 1)">Add to Cart</button>
+        </div>
+      </section>
+
+      <div id="cart-summary">
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
